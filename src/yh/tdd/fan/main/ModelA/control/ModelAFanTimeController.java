@@ -12,12 +12,7 @@ public class ModelAFanTimeController implements FanTimeController {
 
 	@Override
 	public void setTimeout(float minute) {
-		System.out.println("선풍기를 " + Float.valueOf(minute * 60).intValue() + "초후에 멈춘다..");
-		try {
-			Thread.sleep(Float.valueOf(minute * 60 * 1000).longValue());
-		} catch (Exception e) {
-		}
-		api.turnOff();
+		api.setTimeout(minute);
 	}
 
 }

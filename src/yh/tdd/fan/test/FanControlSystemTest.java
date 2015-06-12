@@ -12,8 +12,8 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import yh.tdd.fan.main.ModelA.api.ModelAApi;
-import yh.tdd.fan.main.ModelA.api.Pollable;
 import yh.tdd.fan.main.ModelA.api.ModelAApi.WindSpeed;
+import yh.tdd.fan.main.ModelA.api.Pollable;
 import yh.tdd.fan.main.ModelA.control.ModelAFanTimeController;
 import yh.tdd.fan.main.ModelA.control.ModelAFanUI;
 import yh.tdd.fan.main.ModelA.control.ModelAFanWindDirectionRotator;

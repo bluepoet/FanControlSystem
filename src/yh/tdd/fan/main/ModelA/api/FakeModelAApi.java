@@ -1,6 +1,8 @@
 package yh.tdd.fan.main.ModelA.api;
 
 public class FakeModelAApi extends ModelAApi {
+	private boolean isRunning = false;
+	private boolean isRotating = false;
 	private WindSpeed speed;
 
 	@Override
@@ -51,8 +53,16 @@ public class FakeModelAApi extends ModelAApi {
 	}
 
 	@Override
-	public boolean isTimeout() {
-		// TODO Auto-generated method stub
-		return false;
+	public void setTimeout(float minute) {
+		System.out.println("선풍기를 " + Float.valueOf(minute * 60).intValue() + "초후에 멈춘다..");
+
+		try {
+			Thread.sleep(Float.valueOf(minute * 60 * 1000).longValue());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		System.out.println("타이머시간 " + Float.valueOf(minute * 60).intValue() + "초 종료!");
+		this.turnOff();
 	}
 }

@@ -1,9 +1,6 @@
 package yh.tdd.fan.main.ModelA.api;
 
 public abstract class ModelAApi {
-	protected boolean isRunning = false;
-	protected boolean isRotating = false;
-
 	public static enum WindSpeed {
 		LEVEL0, LEVEL1, LEVEL2, LEVEL3;
 
@@ -58,7 +55,7 @@ public abstract class ModelAApi {
 
 	public abstract boolean getRotationButtonStatus();
 
-	public abstract boolean isTimeout();
+	public abstract void setTimeout(float minute);
 
 	public static ModelAApi instance() {
 		return new FakeModelAApi();
