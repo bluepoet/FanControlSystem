@@ -1,8 +1,8 @@
 package yh.tdd.fan.main.ModelA.control;
 
 import yh.tdd.fan.main.ModelA.api.ModelAApi;
+import yh.tdd.fan.main.ModelA.api.Pollable;
 import yh.tdd.fan.main.ModelA.api.ModelAApi.WindSpeed;
-import yh.tdd.fan.main.control.Pollable;
 import yh.tdd.fan.main.control.FanUI;
 
 public class ModelAFanUI extends FanUI implements Pollable {
