@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import yh.tdd.fan.main.ModelA.api.ModelAApi;
 import yh.tdd.fan.main.ModelA.api.ModelAApi.WindSpeed;
-import yh.tdd.fan.main.ModelA.control.FanModelAUI;
+import yh.tdd.fan.main.ModelA.control.ModelAFanUI;
 import yh.tdd.fan.main.ModelA.control.ModelAFanTimeController;
 import yh.tdd.fan.main.ModelA.control.ModelAFanWindDirectionRotator;
 import yh.tdd.fan.main.ModelA.control.ModelAFanWindGenerator;
@@ -27,14 +27,14 @@ import com.google.common.collect.Lists;
 public class FanControlSystemTest {
 	private ModelAApi api;
 	private FanWindGenerator fanWindGenerator;
-	private FanModelAUI ui;
+	private ModelAFanUI ui;
 	private List<Pollable> pollables = Lists.newArrayList();
 
 	@Before
 	public void setUp() {
 		api = ModelAApi.instance();
 		fanWindGenerator = new ModelAFanWindGenerator(api);
-		ui = new FanModelAUI(api);
+		ui = new ModelAFanUI(api);
 		pollables.add(ui);
 	}
 

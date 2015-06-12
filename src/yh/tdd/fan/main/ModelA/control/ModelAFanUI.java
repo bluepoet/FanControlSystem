@@ -5,10 +5,10 @@ import yh.tdd.fan.main.ModelA.api.ModelAApi.WindSpeed;
 import yh.tdd.fan.main.control.Pollable;
 import yh.tdd.fan.main.control.FanUI;
 
-public class FanModelAUI extends FanUI implements Pollable {
+public class ModelAFanUI extends FanUI implements Pollable {
 	private ModelAApi api;
 
-	public FanModelAUI(ModelAApi api) {
+	public ModelAFanUI(ModelAApi api) {
 		this.api = api;
 	}
 
