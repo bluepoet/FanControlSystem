@@ -17,7 +17,7 @@ public class ModelAFanTimeController implements FanTimeController {
 			Thread.sleep(Float.valueOf(minute * 60 * 1000).longValue());
 		} catch (Exception e) {
 		}
-		api.isRunning = false;
+		api.turnOff();
 	}
 
 }

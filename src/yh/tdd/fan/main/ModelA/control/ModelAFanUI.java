@@ -28,10 +28,10 @@ public class ModelAFanUI extends FanUI implements Pollable {
 
 	@Override
 	public void poll() {
-		if (api.isRunning) {
+		if (api.getPowerStatus()) {
 			System.out.println("선풍기 작동중");
 			System.out.println("선풍기세기는 현재 " + api.getSpeedButtonStatus() + " 입니다.");
-			System.out.println("선풍기는 현재 " + (api.getRotationButtonStatus() == true ? "회전중인" : "멈춰있는") + "상태입니다.");
+			System.out.println("선풍기는 현재 " + (api.getRotationButtonStatus() == true ? "회전중인" : "회전중이 아닌") + " 상태입니다.");
 		} else {
 			System.out.println("선풍기 멈춤");
 		}

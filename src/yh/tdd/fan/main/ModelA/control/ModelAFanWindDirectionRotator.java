@@ -12,14 +12,11 @@ public class ModelAFanWindDirectionRotator implements FanWindDirectionRotator {
 
 	@Override
 	public void rotate() {
-		api.isRotating = true;
 		api.startRotation();
 	}
 
 	@Override
 	public void pause() {
-		api.isRotating = false;
 		api.stopRotation();
 	}
-
 }

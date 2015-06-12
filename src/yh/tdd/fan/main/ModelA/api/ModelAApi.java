@@ -1,8 +1,8 @@
 package yh.tdd.fan.main.ModelA.api;
 
 public abstract class ModelAApi {
-	public boolean isRunning = false;
-	public boolean isRotating = false;
+	protected boolean isRunning = false;
+	protected boolean isRotating = false;
 
 	public static enum WindSpeed {
 		LEVEL0, LEVEL1, LEVEL2, LEVEL3;

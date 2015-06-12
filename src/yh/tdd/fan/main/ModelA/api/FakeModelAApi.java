@@ -2,14 +2,17 @@ package yh.tdd.fan.main.ModelA.api;
 
 public class FakeModelAApi extends ModelAApi {
 	private WindSpeed speed;
-	
+
 	@Override
 	public void turnOn() {
+		this.isRunning = true;
 		System.out.println("turnOn");
+		setSpeed(WindSpeed.LEVEL0);
 	}
 
 	@Override
 	public void turnOff() {
+		this.isRunning = false;
 		System.out.println("turnOff");
 	}
 
@@ -21,12 +24,14 @@ public class FakeModelAApi extends ModelAApi {
 
 	@Override
 	public void startRotation() {
+		this.isRotating = true;
 		System.out.println("회전시작!");
-		
+
 	}
 
 	@Override
 	public void stopRotation() {
+		this.isRotating = false;
 		System.out.println("회전멈춤!");
 	}
 

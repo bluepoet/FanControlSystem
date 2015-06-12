@@ -7,12 +7,14 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import yh.tdd.fan.main.ModelA.api.ModelAApi;
 import yh.tdd.fan.main.ModelA.api.ModelAApi.WindSpeed;
-import yh.tdd.fan.main.ModelA.control.ModelAFanUI;
 import yh.tdd.fan.main.ModelA.control.ModelAFanTimeController;
+import yh.tdd.fan.main.ModelA.control.ModelAFanUI;
 import yh.tdd.fan.main.ModelA.control.ModelAFanWindDirectionRotator;
 import yh.tdd.fan.main.ModelA.control.ModelAFanWindGenerator;
 import yh.tdd.fan.main.ModelA.control.ModelAFanWindStrengthController;
@@ -24,6 +26,7 @@ import yh.tdd.fan.main.control.Pollable;
 
 import com.google.common.collect.Lists;
 
+@FixMethodOrder(MethodSorters.JVM)
 public class FanControlSystemTest {
 	private ModelAApi api;
 	private FanWindGenerator fanWindGenerator;
